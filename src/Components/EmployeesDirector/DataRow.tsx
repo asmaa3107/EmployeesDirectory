@@ -29,6 +29,8 @@ export function DataRow({employees}:Props){
 //       setProducts(products.filter((p) => p.id !== id));
 //     });
 //   };
+
+
  return(
     <>
      {employees.map((employee) => (
@@ -38,7 +40,12 @@ export function DataRow({employees}:Props){
             </td>
             <td>{employee.empName}</td>
             <td>{employee.email}</td>
-            <td>{employee.dateStart}</td>
+            <td>{new Date().toLocaleString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric"
+              })}
+            </td>
             <td>
                 <button>
                     Update Product

@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-// import logo from './logo.svg';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
-import EmployeeDirector from './Components/EmployeesDirector/Employees-Director';
-import { saveDataToFile } from './data/faker';
+import EmployeeDirector from './Components/EmployeesDirector/EmployeesDirector';
+import CreateNew from './Components/EmployeesDirector/CreateNew/CreateNew';
 
 
 function App() {
@@ -13,7 +12,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-         <EmployeeDirector />
+        <Router>
+          <Routes>
+            <Route path="/" element={<EmployeeDirector />} />
+            <Route path="/new-employee" Component={CreateNew} />
+          </Routes>
+        </Router>
       </header>
     </div>
   );
