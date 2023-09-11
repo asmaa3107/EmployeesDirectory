@@ -5,19 +5,27 @@ export const getAllEmp = async () => {
   const response = await axios.get("http://localhost:5001/employees");
   return response.data;
 };
+export const apiClient = axios.create({
+  baseURL: "http://localhost:5001",
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
 //create
 export const createNewEmp = async (employee: emp_type) => {
-  debugger;
-  // const response = await axios.post("http://localhost:5001/employees", employee);
-  fetch("http://localhost:5001/employees", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(employee),
-  }).then((res) => {
-    console.log(res);
-  });
+  console.log(JSON.stringify(apiClient), apiClient.head.name);
+  const response = await apiClient.post("/employees/", employee);
+
+  // const response  = fetch("http://localhost:5001/employees/", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify(employee),
+  // }).then((res) => {
+  //   console.log(res);
+  // });
+  return response;
 };
 
 //update

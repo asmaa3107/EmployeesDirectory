@@ -1,5 +1,5 @@
 export type emp_type = {
-  _id: string;
+  id: string;
   empName: string;
   email: string;
   phone: string;

@@ -8,7 +8,7 @@ const generateEmployees = (count: number) => {
 
   for (let i = 0; i < count; i++) {
     const employee :emp_type = {
-      _id:faker.string.alpha(15)  ,
+      id:faker.string.alpha(15)  ,
       empName: faker.person.fullName(),
       email: faker.internet.email(),
       phone: faker.phone.number(),

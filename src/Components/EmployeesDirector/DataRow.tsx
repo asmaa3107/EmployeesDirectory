@@ -34,7 +34,7 @@ export function DataRow({employees}:Props){
  return(
     <>
      {employees.map((employee) => (
-        <tr key={employee._id}>
+        <tr key={employee.id}>
             <td>
               <img src={`${employee.avatar}`}  alt={`${employee.empName}`} className="avatar" />
             </td>

@@ -2,6 +2,7 @@ import React from "react";
 import { emp_type } from "../../../utils/employee";
 import { useForm } from "react-hook-form";
 import { createNewEmp } from "../../../utils/services";
+import generateRandomId from "../../../utils/generatePassword";
 
 const CreateNew = () => {
   const {
@@ -10,14 +11,17 @@ const CreateNew = () => {
     formState: { errors },
   } = useForm<emp_type>();
   const handleCreateEmployee = (data: emp_type) => {
+    const randomId = generateRandomId(15);
+
     const finalObj : emp_type = {
       ...data,
-      _id: "BEuDGdKeZXlTBVP",
+      id: randomId,
       salary:'5555',
       dateStart: Date.now().toString()
     };
-    console.log(finalObj);
+
     createNewEmp(finalObj);
+    alert('new employee added !!')
   };
   return (
     <div>

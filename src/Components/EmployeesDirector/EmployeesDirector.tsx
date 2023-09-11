@@ -33,7 +33,6 @@ function EmployeeDirector() {
 //-------------
 
 const handleScroll = () => {
-  debugger;
   if (
     window.innerHeight + document.documentElement.scrollTop ===
     document.documentElement.offsetHeight
@@ -42,9 +41,11 @@ const handleScroll = () => {
     setCurrentPage((prevPageNumber) => prevPageNumber + 1);
   }
 };
-
+const loadMore = () => {
+    // Reached the bottom of the page
+    setCurrentPage((prevPageNumber) => prevPageNumber + 1);
+};
 useEffect(() => {
-  debugger;
   window.addEventListener('scroll', handleScroll);
   return () => {
     window.removeEventListener('scroll', handleScroll);
@@ -84,7 +85,7 @@ const visibleEmployees = employees.slice(0, currentPage * PAGE_SIZE);
         {loading ?  <tr><td colSpan={5}>LOADING ... </td></tr> : <DataRow  employees={visibleEmployees}/>}
       </tbody>
     </table>
-    <div className="footer"> number of employees in this page : {visibleEmployees.length} </div>
+    <div className="footer"><button  onClick={loadMore}>Load More</button> Employees : {visibleEmployees.length} </div>
 
   </div>
 </div>
