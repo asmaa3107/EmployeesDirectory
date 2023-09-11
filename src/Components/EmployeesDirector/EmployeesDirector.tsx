@@ -33,6 +33,7 @@ function EmployeeDirector() {
 //-------------
 
 const handleScroll = () => {
+  debugger;
   if (
     window.innerHeight + document.documentElement.scrollTop ===
     document.documentElement.offsetHeight
@@ -43,6 +44,7 @@ const handleScroll = () => {
 };
 
 useEffect(() => {
+  debugger;
   window.addEventListener('scroll', handleScroll);
   return () => {
     window.removeEventListener('scroll', handleScroll);

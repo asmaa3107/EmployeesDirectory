@@ -1,9 +1,24 @@
-import React from 'react';
-
+import React from "react";
+import { emp_type } from "../../../utils/employee";
+import { useForm } from "react-hook-form";
+import { createNewEmp } from "../../../utils/services";
 
 const CreateNew = () => {
-
-  const handleCreateProduct = () =>{}
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<emp_type>();
+  const handleCreateEmployee = (data: emp_type) => {
+    const finalObj : emp_type = {
+      ...data,
+      _id: "BEuDGdKeZXlTBVP",
+      salary:'5555',
+      dateStart: Date.now().toString()
+    };
+    console.log(finalObj);
+    createNewEmp(finalObj);
+  };
   return (
     <div>
       <div>
@@ -12,55 +27,89 @@ const CreateNew = () => {
             <div>
               <h5 className="card-title">Add new Employee</h5>
             </div>
-            <div>
-            </div>
+            <div></div>
           </div>
           <div className="card-body">
             <div id="container">
-              <div className="underline">
-              </div>
-            
-              <form onSubmit={() => handleCreateProduct()} method="post" id="contact_htmlform">
+              <div className="underline"></div>
+
+              <form
+                onSubmit={handleSubmit(handleCreateEmployee)}
+                id="contact_htmlform"
+              >
                 <div className="name">
                   <label htmlFor="name"></label>
-                  <input type="text" placeholder="name is" name="name" id="name_input" required />
+                  <input
+                    type="text"
+                    placeholder="name is"
+                    id="empName"
+                    {...register("empName", { required: true })}
+                  />
                 </div>
                 <div className="email">
                   <label htmlFor="email"></label>
-                  <input type="email" placeholder="e-mail is" name="email" id="email_input" required />
+                  <input
+                    type="email"
+                    placeholder="e-mail is"
+                    id="email"
+                    {...register("email", { required: true })}
+                  />
                 </div>
                 <div className="telephone">
                   <label htmlFor="telephone"></label>
-                  <input type="text" placeholder="number is" name="telephone" id="telephone_input" required />
+                  <input
+                    type="text"
+                    placeholder="number is"
+                    id="phone"
+                    {...register("phone", { required: true })}
+                  />
                 </div>
                 <div className="dateOfBirth">
-                  <label htmlFor="name" className='formlable'>Date of Birth</label>
-                  <input type="date" placeholder="date is " name="dateOfBirth" id="dateOfBirth_input" required />
+                  <label htmlFor="name" className="formlable">
+                    Date of Birth
+                  </label>
+                  <input
+                    type="date"
+                    placeholder="date is "
+                    id="dateOfBirth"
+                    {...register("dateOfBirth", { required: true })}
+                  />
                 </div>
-                
+
                 <div className="subject">
                   <label htmlFor="subject"></label>
-                <select placeholder="select department" name="subject" id="subject_input" required >
-                  <option disabled hidden selected>Department </option>
-                  <option>HR</option>
-                  <option>Software</option>
-                  <option>Opertion</option>
-                </select>
+                  <select
+                    placeholder="select department"
+                    id="department"
+                    {...register("department", { required: true })}
+                  >
+                    <option disabled hidden defaultValue="Department">
+                      Department{" "}
+                    </option>
+                    <option>HR</option>
+                    <option>Software</option>
+                    <option>Opertion</option>
+                  </select>
                 </div>
                 <div className="message">
-                <label htmlFor="jobtitle"></label>
-                  <input type="text" placeholder="job title is" name="jobtitle" id="jobtitle_input" required />
+                  <label htmlFor="jobtitle"></label>
+                  <input
+                    type="text"
+                    placeholder="job title is"
+                    id="jobTitle"
+                    {...register("jobTitle", { required: true })}
+                  />
                 </div>
-                 <div className="submit">
-                    {/*  */}
-                <input type="submit" value="+ Create " id="htmlForm_button" />
+                <div className="submit">
+                  {/*  */}
+                  <input type="submit" value="+ Create " id="htmlForm_button" />
                 </div>
               </form>
             </div>
           </div>
-          </div>
-          </div>
-          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
