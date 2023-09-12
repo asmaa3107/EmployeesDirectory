@@ -24,8 +24,6 @@ function EmployeeDirector() {
     .finally(() => {
      setLoading(false);
     });
-    TOTAL_PAGES = Math.floor(employees.length / PAGE_SIZE);
-    console.log(TOTAL_PAGES);
   }
   useEffect(() => {
     getEmployees();
@@ -66,8 +64,6 @@ const visibleEmployees = employees.slice(0, currentPage * PAGE_SIZE);
         + New
       </button>
       </Link>
-      
-      {/* onClick={() => handleCreateProduct({ name: "New Product" })} */}
     </div>
   </div>
   <div className="card-body">
