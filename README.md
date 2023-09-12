@@ -8,7 +8,7 @@ in this task I used :
 
 ### Task Demo !
 
-[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=Hc79sDi3f0U "Now in Android: 55") 
+[<img style="max-width:500px" src="https://cdn.loom.com/sessions/thumbnails/15232ce80a92460f98e34dd0df4016a7-with-play.gif">]([https://www.youtube.com/watch?v=Hc79sDi3f0U "Now in Android: 55"](https://www.loom.com/share/15232ce80a92460f98e34dd0df4016a7)) 
 
 ### Getting started
 
