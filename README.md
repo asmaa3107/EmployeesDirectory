@@ -27,6 +27,9 @@ in this task I used :
 - I used FakerJS to fake Careation of 10,000  employee data.
 - you will find generated data in root folder in file called "employee.json"
 
+### Missed ( in progress )
 
+- NUdate , delete
+- unit testing
 
 
