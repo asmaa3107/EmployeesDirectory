@@ -82,7 +82,6 @@ const visibleEmployees = employees.slice(0, currentPage * PAGE_SIZE);
       </tbody>
     </table>
     <div className="footer"><button  onClick={loadMore}>Load More</button> Employees : {visibleEmployees.length} </div>
-
   </div>
 </div>
     </div>

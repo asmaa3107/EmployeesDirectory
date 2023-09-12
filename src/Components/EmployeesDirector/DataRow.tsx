@@ -5,28 +5,23 @@ type Props = {
   
 export function DataRow({employees}:Props){
     
-//   const handleCreateProduct = (product) => {
-//     createProduct(product).then((data) => {
-//       setProducts([...products, data]);
-//     });
-//   };
 
-//   const handleUpdateProduct = (id, product) => {
-//     updateProduct(id, product).then((data) => {
-//       const updatedProducts = products.map((p) => {
-//         if (p.id === id) {
+//   const handleUpdateEmployee =  (id, employee) => {
+//     updateemployee(id, employee).then((data) => {
+//       const updatedemployees = employees.map((e) => {
+//         if (e.id === id) {
 //           return data;
 //         } else {
-//           return p;
+//           return e;
 //         }
 //       });
-//       setProducts(updatedProducts);
+//       setemployees(updatedemployees);
 //     });
 //   };
 
-//   const handleDeleteProduct = (id) => {
-//     deleteProduct(id).then(() => {
-//       setProducts(products.filter((p) => p.id !== id));
+//   const handleDeleteEmployee =  (id) => {
+//     deleteemployee(id).then(() => {
+//       setemployees(employees.filter((p) => p.id !== id));
 //     });
 //   };
 
@@ -48,10 +43,10 @@ export function DataRow({employees}:Props){
             </td>
             <td>
                 <button>
-                    Update Product
+                    Update Employee
                 </button>
                 <button >
-                    Delete Product
+                    Delete Employee
                 </button>
             </td>
           </tr>
