@@ -16,7 +16,7 @@ in this task I used :
 
 ### How to run
 
-- npm run start - to run fronend
+- npm run start - to run frontend
 - npm run backend - to run backend
 - Open http://localhost:3000 with your favorite browser to see your project.
 - Open http://localhost:5001 to run backend json
@@ -29,7 +29,7 @@ in this task I used :
 
 ### Missed ( in progress )
 
-- NUdate , delete
+- update , delete
 - unit testing
 
 
