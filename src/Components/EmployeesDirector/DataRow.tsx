@@ -60,5 +60,3 @@ export function DataRow({employees}:Props){
  );
 }
 
-// onClick={() => handleDeleteProduct(employee._id)}
-// onClick={() => handleUpdateProduct(employee._id, { name: "Updated Product" })}
