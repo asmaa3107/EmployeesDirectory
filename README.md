@@ -8,7 +8,7 @@ in this task I used :
 
 ### Task Demo !
 
-[<iframe src="https://www.loom.com/embed/15232ce80a92460f98e34dd0df4016a7?sid=4504deb6-7fa8-4e3f-a1f7-8af742c858a0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>]
+[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=Hc79sDi3f0U "Now in Android: 55")
 
 ### Getting started
 
